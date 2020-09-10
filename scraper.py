@@ -52,4 +52,4 @@ def send_email():
 
 while(True):
      check_price()
-     time.sleep(60)
+     time.sleep(5)
