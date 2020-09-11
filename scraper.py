@@ -20,7 +20,7 @@ def check_price():
      price = soup.find(attrs={"class":"priceValuePurchaseLayer"}).get_text().strip()
      converted_price = "".join(num for num in price[4:] if num not in ("?", ";", ":", "!", ","))
 
-     if(float(converted_price) > 1000):
+     if(float(converted_price) < 1000):
           send_email()
 
      # print(converted_price)
@@ -52,4 +52,4 @@ def send_email():
 
 while(True):
      check_price()
-     time.sleep(5)
+     time.sleep(3600)
